@@ -62,5 +62,21 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+	<script>
+	var $app = $('.app');
+	var w = $app.width() + 'px';
+	var opts = {duration: 'slow', easing: 'swing'};
+		$('body').on('keydown', function(e) {
+			e.preventDefault();
+			if(e.which == 37) {
+				$app.stop().animate({scrollLeft: '-=' + w}, opts);
+			}
+			else if (e.which == 39) {
+				$app.stop().animate({scrollLeft: '+=' + w}, opts);
+			}
+		});
+	</script>
 	</body>
 </html>
