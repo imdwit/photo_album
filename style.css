@@ -4,28 +4,13 @@
 }
 
 
-.container,
 .page {
-	display: flex;
 	box-sizing: border-box;
 	padding: 1em;
 }
 
-.container,
-.page {
-	flex-direction: column;
-	justify-content: space-between;
-	align-content: space-around;
-}
 
-.container {
-	max-width: 1600px;
-	margin: auto;
-}
 
-.page {
-	flex: 1 100%;;
-}
 
 .img-caption {
 	margin: 0.5em 0.5em 0.25em;
@@ -41,16 +26,44 @@
 
 
 @media screen and (min-width: 900px) {
+
+
+
 	html, body,
 	.container,
 	 .page {
-		min-height: 100%;
+			height: 100%;
 	}
+
+	.app {
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
+		max-width: 1600px;
+		margin: auto;
+		width: 100%;
+		-webkit-scroll-snap-type: mandatory;
+		-ms-scroll-snap-type: mandatory;
+		scroll-snap-type: mandatory;
+		-webkit-scroll-snap-points-x: repeat(100%);
+		-ms-scroll-snap-points-x: repeat(100%);
+		scroll-snap-points-x: repeat(100%);
+	}
+
 	.container {
-		flex-direction: row;
+		display: inline-flex;
+
+		width: 100%;
+		height: 100%;
+		/*flex-direction: row;*/
 	}
+
 	.page {
-		flex: 1 50%;
+		display: flex;
+		flex: 1;
+		flex-direction: row;
+		align-self: center;
+
 	}
 	.page:nth-child(odd) {
 		border-right: 1px solid #dfdfdf;
@@ -58,17 +71,18 @@
 
 	.img-wrap {
 		width: 60%;
+		margin: 1em;
 	}
 
 	.corners {
-		padding: 1em;
+		padding: 1em 2em;
 		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: space-around;
 	}
 
 	.corners .img-wrap {
-		width: 90%;
+		width: 80%;
 	}
 
 	.corners .img-wrap:nth-child(1) {
