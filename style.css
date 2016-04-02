@@ -39,6 +39,7 @@
 		overflow-x: auto;
 		overflow-y: hidden;
 		white-space: nowrap;
+		-webkit-overflow-scrolling: touch;
 		max-width: 1600px;
 		margin: auto;
 		width: 100%;
