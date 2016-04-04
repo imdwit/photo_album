@@ -3,11 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
-		<link href="./style.css" rel="stylesheet" />
+		<link href="./style3.css" rel="stylesheet" />
 	</head>
 	<body>
 		<div class="app">
-		<div class="container">
 			<div class="page corners">
 				<div class="img-wrap">
 					<img src="./imgs/1.jpeg" />
@@ -33,8 +32,6 @@
 					<p class="img-caption">Optional image caption goes here</p>
 				</div>
 			</div>
-		</div>
-		<div class="container">
 			<div class="page corners">
 				<div class="img-wrap">
 					<img src="./imgs/6.jpeg" />
@@ -60,12 +57,11 @@
 					<p class="img-caption">Optional image caption goes here</p>
 				</div>
 			</div>
-		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
 	<script>
-	var $app = $('body');
+	var $app = $('.app');
 	var w = $app.width() + 'px';
 	var opts = {duration: 'slow', easing: 'swing'};
 		$('body').on('keydown', function(e) {

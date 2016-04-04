@@ -34,33 +34,51 @@ img {
     scroll-snap-points-x: repeat(100%);
 }
 
-
-
-@media (min-width: 415px) {
-    .app {
-        display: flex;
-        flex-flow: row nowrap;
-        height: 100%;
-    }
-    .container {
-        display: inline-flex;
-				flex-wrap: nowrap;
-        flex: 0 0 100%;
-        height: 100%;
-        width: 100%;
-    }
-    .page {
-        display: inline-flex;
-        flex-direction: row;
-        flex: 1 0 100%;
-    }
+.corners {
+	padding: 1em 2em;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
+.corners .img-wrap {
+	width: 80%;
+}
 
+.corners .img-wrap:nth-child(1) {
+	align-self:flex-start;
+}
 
+.corners .img-wrap:nth-child(2) {
+	align-self:flex-end;
+}
+
+.corners,
+.stacked {
+	flex-direction: column;
+
+}
+.stacked {
+	align-items: center;
+}
+@media (min-width: 415px) {
+
+	.app {
+			display: flex;
+			flex-flow: row nowrap;
+			height: 100%;
+	}
+
+	.page {
+			display: inline-flex;
+			flex-direction: row;
+			flex: 1 0 100%;
+	}
+
+}
 
 @media (min-width: 769px) {
     .page {
-        flex: 1 0;
+        flex: 1 0 50%;
     }
 }
