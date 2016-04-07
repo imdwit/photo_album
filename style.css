@@ -12,10 +12,15 @@ img {
 }
 .img-wrap {
     margin-bottom: 1em;
+    box-shadow: 0px 2px 5px #eee;
+    word-wrap: break-word;
+    white-space: normal;
+    padding-bottom: 0.25em;
 }
 .img-wrap p {
     padding: .5em 0 0 .5em;
     line-height: 1.2;
+    width: 100%;
 }
 .app {
     overflow-x: auto;
@@ -24,7 +29,6 @@ img {
     margin: auto;
     max-width: 1600px;
     width: 100%;
-    outline: 1px solid green;
     white-space: nowrap;
     -webkit-scroll-snap-type: mandatory;
     -ms-scroll-snap-type: mandatory;
@@ -80,7 +84,8 @@ img {
   .triangle {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: baseline;
   }
 
   .triangle .img-wrap {
