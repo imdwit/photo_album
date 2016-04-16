@@ -48,12 +48,12 @@ img {
     max-width: 1600px;
     width: 100%;
     white-space: nowrap;
-    -webkit-scroll-snap-type: mandatory;
-    -ms-scroll-snap-type: mandatory;
-    scroll-snap-type: mandatory;
-    -webkit-scroll-snap-points-x: repeat(100%);
-    -ms-scroll-snap-points-x: repeat(100%);
-    scroll-snap-points-x: repeat(100%);
+    /*-webkit-scroll-snap-type: mandatory;*/
+    /*-ms-scroll-snap-type: mandatory;*/
+    /*scroll-snap-type: mandatory;*/
+    /*-webkit-scroll-snap-points-x: repeat(100%);*/
+    /*-ms-scroll-snap-points-x: repeat(100%);*/
+    /*scroll-snap-points-x: repeat(100%);*/
 
 }
 
