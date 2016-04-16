@@ -7,10 +7,10 @@
 		<link href="./style.css" rel="stylesheet" />
 	</head>
 	<body>
-		<div class="appd" id="app">
-			<div class="page corners">
-				<div class="img-wrap">
-					<img src="./imgs/1.jpeg" />
+		<div class="app" id="app">
+			<div class="page corners page-">
+				<div class="img-wrap  img-">
+					<img src="./imgs/IMG_0007.jpg" />
 					<p class="img-caption">Optional image caption goes here</p>
 				</div>
 				<div class="img-wrap">
@@ -39,7 +39,7 @@
 					<p class="img-caption">Optional image caption goes here Optional image caption goes here Optional image caption goes here Optional image caption goes here</p>
 				</div>
 				<div class="img-wrap">
-					<img src="./imgs/7.jpeg" />
+					<img src="./imgs/IMG_0007.jpg" />
 					<p class="img-caption">Optional image caption goes here Optional image caption goes here Optional image caption goes here </p>
 				</div>
 			</div>
@@ -50,7 +50,7 @@
 					<p class="img-caption">Optional image caption goes here</p>
 				</div>
 				<div class="img-wrap">
-					<img src="./imgs/3.jpeg" />
+					<img src="./imgs/IMG_0007.jpg" />
 					<p class="img-caption">Optional image caption goes here</p>
 				</div>
 				<div class="img-wrap">
@@ -76,6 +76,26 @@
 		});
 	</script>
 	<script src="exif.js"></script>
-	<script src="app.js"></script>
+	<!-- <script src="app.js"></script> -->
+
+	<script>
+
+	var lightbox = false;
+
+
+	$('.page').on('click', '.img-wrap', function(e) {
+		if($(this).hasClass('hilite')) {
+			$('.hilite').removeClass('hilite');
+				return false;
+		}
+		$('.hilite').removeClass('hilite');
+		// $('body').addClass('hilite')
+		$(e.delegateTarget).addClass('hilite')
+		$(this).addClass('hilite');
+		$('.app').addClass('hilite')
+	});
+
+
+	</script>
 	</body>
 </html>

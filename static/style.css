@@ -115,6 +115,31 @@ img {
     width: 100%;
   }
 
+  .app,.page, .img-wrap {
+    transition: all .333s;
+  }
+
+  .page.hilite {
+    flex: 1 0 100%;
+  }
+
+  .img-wrap.hilite img {
+    margin: 0 auto;
+  }
+
+  .page.hilite .img-wrap {
+    /*width: initial;*/
+  }
+  .img-wrap.hilite {
+    width: 100% !important;
+    align-self: center;
+  }
+
+  .app.hilite {
+    max-width: 100%;
+    padding: 1em;
+  }
+
 }
 
 @media (min-width: 769px) {
@@ -122,14 +147,14 @@ img {
       flex: 1 0 50%;
       align-self:center;
       max-height: 100%;
+
+      transition: all .333s;
     }
 
     .page .img-wrap:nth-child(1) {
       margin-bottom: 2em;
     }
-}
 
 
-.page, .app {
-  display: none;
+
 }
