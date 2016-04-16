@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+#image-upload-wrap {
+  height: 500px;
+  width: 400px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #eee;
+}
+
+#image-upload {
+  display: none;
+}
+
+.img-wrap {
+    margin-bottom: 1em;
+    box-shadow: 0px 2px 5px #eee;
+    word-wrap: break-word;
+    white-space: normal;
+    padding-bottom: 0.25em;
+}
+.img-wrap p {
+    padding: .5em 0 0 .5em;
+    line-height: 1.2;
+    width: 100%;
+}
+.app {
+    overflow-x: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    margin: auto;
+    height: 100%;
+    max-width: 1600px;
+    width: 100%;
+    white-space: nowrap;
+    -webkit-scroll-snap-type: mandatory;
+    -ms-scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
+    -webkit-scroll-snap-points-x: repeat(100%);
+    -ms-scroll-snap-points-x: repeat(100%);
+    scroll-snap-points-x: repeat(100%);
+
+}
+
+
+@media (min-width: 415px) {
+
+	.app {
+			display: flex;
+			flex-flow: row nowrap;
+      overflow-y: hidden;
+	}
+
+	.page {
+    padding: 2em 1em 1em;
+		display: inline-flex;
+		flex-direction: row;
+		flex: 1 0 100%;
+    overflow: scroll;
+	}
+
+  .corners {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .corners .img-wrap {
+    width: 80%;
+
+  }
+  .corners .img-wrap:nth-child(2) {
+    align-self: flex-end;
+    margin-left: auto;
+  }
+
+  .stacked {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+
+  .stacked .img-wrap {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+
+
+  .triangle {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .triangle .img-wrap {
+    width: 45%;
+  }
+
+  .triangle .img-wrap:first-child {
+    width: 100%;
+  }
+
+  .app,.page, .img-wrap {
+    transition: all .333s;
+  }
+
+  .page.hilite {
+    flex: 1 0 100%;
+  }
+
+  .img-wrap.hilite img {
+    margin: 0 auto;
+  }
+
+  .page.hilite .img-wrap {
+    /*width: initial;*/
+  }
+  .img-wrap.hilite {
+    width: 100% !important;
+    align-self: center;
+  }
+
+  .app.hilite {
+    max-width: 100%;
+    padding: 1em;
+  }
+
+}
+
+@media (min-width: 769px) {
+    .page {
+      flex: 1 0 50%;
+      align-self:center;
+      max-height: 100%;
+
+      transition: all .333s;
+    }
+
+    .page .img-wrap:nth-child(1) {
+      margin-bottom: 2em;
+    }
+
+
+
+}
