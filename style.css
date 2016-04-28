@@ -121,6 +121,7 @@ img {
 
   .page.hilite {
     flex: 1 0 100%;
+
   }
 
   .img-wrap.hilite img {
@@ -131,11 +132,16 @@ img {
     /*width: initial;*/
   }
   .img-wrap.hilite {
+    padding: 1em;
+    background: rgba(37, 37, 37, 0.88);
     width: 100% !important;
+    text-align: center;
     align-self: center;
+
   }
 
   .app.hilite {
+
     max-width: 100%;
     padding: 1em;
   }
@@ -157,4 +163,14 @@ img {
 
 
 
+}
+
+
+body.hilite {
+  background: rgba(37, 37, 37, 0.88);
+  color: rgba(255, 255, 255, 0.87);
+}
+
+body.hilite .img-wrap {
+  box-shadow: none;
 }
