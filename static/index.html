@@ -89,10 +89,30 @@
 				return false;
 		}
 		$('.hilite').removeClass('hilite');
+		$('body').addClass('hilite')
 		// $('body').addClass('hilite')
 		$(e.delegateTarget).addClass('hilite')
 		$(this).addClass('hilite');
-		$('.app').addClass('hilite')
+		$('.app').addClass('hilite');
+
+
+		setTimeout(function() {
+
+			var offset = $(e.target).offset();
+			var left = $(e.delegateTarget).offset().left;
+			var top = offset.top;
+
+			console.log('offset', offset, left, top);
+			$(e.delegateTarget).animate({
+				scrollTop: top
+			})
+			$('.app').animate({
+				scrollLeft: left,
+			}, function() {
+				console.log('fin')
+			})
+
+		}, 450);
 	});
 
 
